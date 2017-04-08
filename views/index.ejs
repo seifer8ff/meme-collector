@@ -1,0 +1,12 @@
+<% include ./partials/header %>
+
+<div id="content" class="ui center aligned grid">
+	<div class="column">
+		<% memes.forEach(function(meme) { %>
+			<img class="ui medium image top aligned" src="<%=meme.img%>">
+		<% }); %>
+	</div>
+</div>
+
+
+<% include ./partials/footer %>

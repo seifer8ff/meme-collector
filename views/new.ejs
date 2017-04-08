@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+
+
+<div id="content" class="ui text container segment">
+	<div class="ui huge header">Add Meme</div>
+	<form class="ui form" action="/memes" method="POST">
+		<div class="inline fields">
+			<div class="fourteen wide field">
+				<label>Image URL</label>
+				<input type="text" name="meme[img]" placeholder="URL">
+			</div>
+			<div class="ui checkbox">
+				<input type="checkbox" name="meme[favorite]">
+				<label>Favorite?</label>
+			</div>
+		</div>
+		<div class="field">
+			<label>Keywords</label>
+			<div class="ui right labeled left icon input">
+				<i class="tags icon"></i>
+				<input type="text" name="meme[keywords]" placeholder="Enter tags">
+				<a class="ui tag label">
+					Add Tag
+				</a>
+			</div>
+		</div>
+		<input class="ui green basic big button" type="submit">
+	</form>
+</div>
+
+
+<% include ./partials/footer %>
